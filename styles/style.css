@@ -136,6 +136,12 @@
   font-weight: var(--font-weight-card-text);
 }
 
+.card__button {
+  display: flex;
+  justify-content: end;
+  row-gap: 12px;
+}
+
 .content-button {
   display: flex;
   flex-wrap: wrap;
@@ -148,4 +154,21 @@
   appearance: none;
   min-inline-size: 130px;
   font-family: var(--acent-font);
+}
+
+.footer {
+  border: none;
+  display: flex;
+  justify-content: center;
+}
+
+.button-save {
+  background-color: var(--bg-color);
+  gap: 8px;
+  align-items: center;
+}
+
+.button__icon {
+  block-size: 22px;
+  inline-size: 22px;
 }
