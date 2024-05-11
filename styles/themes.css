@@ -24,8 +24,8 @@
   linear-gradient(#007F0C, #004306);
 
   --accent-color: rgba(0, 204, 20, 1);
-  --font-weight-text: 465;
-  --font-weight-title: 785;
+  --font-weight-card-text: 465;
+  --font-weight-card-title: 785;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -17,10 +17,9 @@
     <script src="./scripts/set-theme.js"></script>
   </head>
   <body class="page">
-    <header class="header">
+    <header class="header wrapper">
       <a href="#" class="header__logo">&lt;/html&gt;</a>
-      <h1 class="header-title"></h1>
-
+      <h1 class="header__title"> закрывающий тег</h1>
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
@@ -47,10 +46,31 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <div class="gradient">
+    <main class="content wrapper">
+      <ul class="card-list">
+        <li class="card-list__item">
+          <article class="card">
+            <h2 class="card__title">Фритрек и нулевой спринт: Подготовка к работе</h2>
+            <img src="./images/bus.jpg" alt="" class="card__image">
+            <div class="card-content">
+              <div class="card__text">
+                <p class="card__text-item">
+                  Всё это время вы были не одиноки (хотя, возможно, иногда и чувствовали, что одни против целого мира). Вас окружали одногруппники, команда сопровождения и просто близкие люди, которым можно пожаловаться, если очередной макет просто так не поддавался. Осваивать что-то новое легче, когда рядом есть единомышленники, не правда ли?
+                </p>
+                <p class="card__text-item">
+                  Место для ваших воспоминаний об окончании второго спринта. 
+                </p>
+              </div>
+              <button class="content-button button-like">
+                <span class="button__text">Like</span>
+            </div>
 
-      </div>
+            </button>
+          </article>
+        </li>
+
+      </ul>
+
     </main>
     <script src="./scripts/like.js"></script>
   </body>
