@@ -117,8 +117,7 @@
   border-block-end: 2px solid var(--accent-color);
   object-fit: cover;
   object-position: center;
-  block-size: 696px;
-  inline-size: 696px;
+  inline-size: 100%;
 }
 
 .card-content {
@@ -128,7 +127,7 @@
 .card__text {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 27px;  
+  row-gap: 27px;
   margin-block-end: 25px;
 }
 
@@ -147,13 +146,16 @@
   flex-wrap: wrap;
   justify-content: center;
   border: 2px solid var(--accent-color);
-  padding: 9px 17px;
   background-color: transparent;
   cursor: pointer;
   white-space: nowrap;
   appearance: none;
   min-inline-size: 130px;
   font-family: var(--acent-font);
+}
+
+.button-like {
+  padding: 9px 17px;
 }
 
 .footer {
@@ -166,6 +168,7 @@
   background-color: var(--bg-color);
   gap: 8px;
   align-items: center;
+  padding: 15px 20px;
 }
 
 .button__icon {
