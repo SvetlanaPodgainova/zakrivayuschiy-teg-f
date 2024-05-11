@@ -13,8 +13,49 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 
 */
+:root {
+  --main-font: "Inter-Variable";
+  --acent-font: "PressStart2P-Regular";
+  --font-weight-text: 400;
+  --font-weight-title: 700;
+  --bg-color: rgba(255, 255, 255, 1);
+  --bg-image: repeating-linear-gradient(#d3d3d3 0px 2px, transparent 2px 4px),
+    repeating-linear-gradient(90deg, #d3d3d3 0px 2px, transparent 2px 4px),
+    linear-gradient(#e7e7e7, #1a1a1a);
+  --accent-color: rgba(0, 0, 0, 1);
+}
 
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--main-font), sans-serif;
+  font-variation-settings: "wght" var(--font-weight-text)
+    var(--font-weight-title);
+  background-color: var(--bg-color);
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-attachment: fixed;
 }
+
+.header {
+  max-inline-size: 700px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  border: 2px solid var(--accent-color);
+  padding: 25px 14px;
+  font-family: var(--acent-font), sans-serif;
+  background-color: var(--bg-color);
+}
+
+.header__logo {
+  font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
+  text-decoration: none;
+  margin-block-end: 20px;
+  margin-block-start: clamp(7.5rem, 6.3462rem + 4.9231vw, 8.5rem);
+  text-transform: uppercase;
+  
+}
+
