@@ -124,16 +124,6 @@
   inset-inline-start: -20px;
 }
 
-@keyframes activ-theme {
-  0% {
-    inset-inline-start: -20px;
-  }
-
-  100% {
-    inset-inline-start: -24px;
-  }
-}
-
 .content {
   margin-block-start: 100px;
   margin-block-end: 50px;
@@ -209,7 +199,7 @@
   column-gap: 8px;
 }
 
-.card__button-heart {
+.card__icon-button {
   appearance: none;
   border: 2px solid transparent;
   padding: 0;
@@ -218,22 +208,17 @@
   display: flex;
   align-items: center;
   transition: 0.3s ease;
+  cursor: pointer;
 }
 
-.card__button-heart:focus-visible {
+.card__icon-button:focus-visible {
   border: 2px solid var(--accent-color);
 }
 
-.card__button-heart:focus,
+.card__icon-button:focus,
 :focus-visible {
   outline: none;
 }
-
-/* анимация иконки сердца */
-.center:hover {
-  color: var(--accent-color);
-}
-
 
 .content-button {
   position: relative;
@@ -276,9 +261,10 @@
   transition: box-shadow 0.3s ease;
 }
 
-.button-like {
+.card__like-button {
   padding: 9px 17px;
   block-size: 36px;
+  inline-size: 130px;
 }
 
 .button__text {
