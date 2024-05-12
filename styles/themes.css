@@ -26,6 +26,7 @@
   --accent-color: rgba(0, 204, 20, 1);
   --font-weight-card-text: 465;
   --font-weight-card-title: 785;
+  --color-button-text:  rgba(0, 204, 20, 1);
 }
 
 @media (prefers-color-scheme: dark) {

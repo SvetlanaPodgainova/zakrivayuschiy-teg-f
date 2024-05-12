@@ -23,6 +23,7 @@
     repeating-linear-gradient(90deg, #d3d3d3 0px 2px, transparent 2px 4px),
     linear-gradient(#e7e7e7, #1a1a1a);
   --accent-color: rgba(0, 0, 0, 1);
+  --color-button-text: rgba(255, 255, 255, 1);
 }
 
 .page {
@@ -79,35 +80,34 @@
 .theme-menu__button {
   border: none;
   background-color: transparent;
+  transition: 0.3s ease;
   cursor: pointer;
   appearance: none;
-  transition: .3s ease;
 }
 
 .theme-menu__button:hover {
-  opacity: .6;
-  transition: .3s ease;
+  opacity: 0.6;
+  transition: 0.3s ease;
 }
 
-.theme-menu__button:focus:focus-visible {
+.theme-menu__button:focus {
   outline: none;
-  opacity: .6;
+  opacity: 0.6;
 }
 
 .theme-menu__button::after {
-  content: '';
+  content: "";
   display: block;
-  block-size: 2px;
+  background-color: var(--accent-color);
+  transition: transform 0.3s ease;
   transform: scaleX(0);
   transform-origin: 0;
-  background-color: var(--accent-color);
-  transition: transform .3s ease;
+  block-size: 2px;
 }
 
-.theme-menu__button:focus:focus-visible::after {
-   transform: scaleX(1);
+.theme-menu__button:focus::after {
+  transform: scaleX(1);
 }
-
 
 .theme-menu__button:disabled {
   position: relative;
@@ -119,8 +119,8 @@
 .theme-menu__button:disabled::before {
   content: "▶";
   position: absolute;
+  animation: activ-theme 0.5s ease-in-out infinite alternate;
   inset-inline-start: -20px;
-  animation: activ-theme .5s ease-in-out infinite alternate;
 }
 
 @keyframes activ-theme {
@@ -128,7 +128,7 @@
     inset-inline-start: -20px;
   }
 
-  100%{
+  100% {
     inset-inline-start: -24px;
   }
 }
@@ -158,16 +158,16 @@
 
 .card__label {
   position: absolute;
+  opacity: 0.5;
   color: var(--accent-color);
   font-family: var(--accent-font-family);
+  font-family: var(--acent-font);
   font-size: 14px;
   text-transform: uppercase;
+  text-shadow: 0 0 1px var(--bg-color);
   inset-inline-end: 25px;
   inset-block-start: 25px;
-  font-family: var(--acent-font);
   mix-blend-mode: hard-light;
-  opacity: 0.5;
-  text-shadow: 0 0 1px var(--bg-color);
 }
 
 @supports (
@@ -208,20 +208,54 @@
 }
 
 .content-button {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   border: 2px solid var(--accent-color);
   font-family: var(--acent-font);
   background-color: transparent;
+  transition: box-shadow 0.3s ease;
   cursor: pointer;
   white-space: nowrap;
   appearance: none;
-  min-inline-size: 130px;
+  min-inline-size: 130px;  
+}
+
+.content-button:hover {
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.content-button::before {
+  content: "";
+  position: absolute;
+  display: block;
+  inset: 0 0;
+  background-color: var(--accent-color);
+  transition: 0.5s ease-in-out;
+  block-size: 100%;
+  inline-size: 0%;
+}
+
+.content-button:hover:before {
+  inline-size: 100%;
+}
+
+.content-button:focus {
+  box-shadow: 2px 2px var(--accent-color);
+  outline: none;
+  transition: box-shadow 0.3s ease;
 }
 
 .button-like {
   padding: 9px 17px;
+}
+
+.button__text {
+  position: absolute;
+  mix-blend-mode: difference;
+  color: var(--color-button-text);
 }
 
 .footer {
