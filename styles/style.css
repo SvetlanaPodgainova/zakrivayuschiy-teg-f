@@ -81,7 +81,33 @@
   background-color: transparent;
   cursor: pointer;
   appearance: none;
+  transition: .3s ease;
 }
+
+.theme-menu__button:hover {
+  opacity: .6;
+  transition: .3s ease;
+}
+
+.theme-menu__button:focus:focus-visible {
+  outline: none;
+  opacity: .6;
+}
+
+.theme-menu__button::after {
+  content: '';
+  display: block;
+  block-size: 2px;
+  transform: scaleX(0);
+  transform-origin: 0;
+  background-color: var(--accent-color);
+  transition: transform .3s ease;
+}
+
+.theme-menu__button:focus:focus-visible::after {
+   transform: scaleX(1);
+}
+
 
 .theme-menu__button:disabled {
   position: relative;
@@ -94,6 +120,17 @@
   content: "▶";
   position: absolute;
   inset-inline-start: -20px;
+  animation: activ-theme .5s ease-in-out infinite alternate;
+}
+
+@keyframes activ-theme {
+  0% {
+    inset-inline-start: -20px;
+  }
+
+  100%{
+    inset-inline-start: -24px;
+  }
 }
 
 .content {
@@ -122,23 +159,25 @@
 .card__label {
   position: absolute;
   color: var(--accent-color);
-  font-family: var(--accent-font-family); 
+  font-family: var(--accent-font-family);
   font-size: 14px;
   text-transform: uppercase;
   inset-inline-end: 25px;
-  inset-block-start: 25px; 
+  inset-block-start: 25px;
   font-family: var(--acent-font);
   mix-blend-mode: hard-light;
-  opacity: .5;
+  opacity: 0.5;
   text-shadow: 0 0 1px var(--bg-color);
 }
 
-@supports ((text-stroke: 1px var(--bg-color)) or (-webkit-text-stroke: 1px var(--bg-color))) {
+@supports (
+  (text-stroke: 1px var(--bg-color)) or
+    (-webkit-text-stroke: 1px var(--bg-color))
+) {
   .card__label {
     -webkit-text-stroke: 1px var(--bg-color);
   }
 }
-
 
 .card__image {
   object-fit: cover;
