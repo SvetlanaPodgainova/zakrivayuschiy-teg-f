@@ -274,7 +274,7 @@
 .button__icon {
   block-size: 22px;
   inline-size: 22px;
-  /* mix-blend-mode: difference; */
-  /* color: var(--color-button-text); */
-  color: blue;
+  mix-blend-mode: difference;
+  color: var(--color-button-text);
+  
 }
