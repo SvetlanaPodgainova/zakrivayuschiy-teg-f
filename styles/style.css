@@ -14,8 +14,8 @@
 
 */
 :root {
-  --main-font: "Inter-Variable";
-  --acent-font: "PressStart2P-Regular";
+  --main-font: "Inter-Variable", sans-serif;
+  --acent-font: "PressStart2P-Regular", monospace;
   --font-weight-card-text: 400;
   --font-weight-card-title: 700;
   --bg-color: rgba(255, 255, 255, 1);
@@ -27,7 +27,7 @@
 
 .page {
   color: var(--accent-color);
-  font-family: var(--main-font), sans-serif;
+  font-family: var(--main-font);
   background-color: var(--bg-color);
   background-image: var(--bg-image);
   background-size: cover;
@@ -113,11 +113,38 @@
   font-weight: var(--font-weight-card-title);
 }
 
-.card__image {
+.image-wrapper {
+  position: relative;
   border-block-end: 2px solid var(--accent-color);
+  block-size: 696px;
+}
+
+.card__label {
+  position: absolute;
+  color: var(--accent-color);
+  font-family: var(--accent-font-family); 
+  font-size: 14px;
+  text-transform: uppercase;
+  inset-inline-end: 25px;
+  inset-block-start: 25px; 
+  font-family: var(--acent-font);
+  mix-blend-mode: hard-light;
+  opacity: .5;
+  text-shadow: 0 0 1px var(--bg-color);
+}
+
+@supports ((text-stroke: 1px var(--bg-color)) or (-webkit-text-stroke: 1px var(--bg-color))) {
+  .card__label {
+    -webkit-text-stroke: 1px var(--bg-color);
+  }
+}
+
+
+.card__image {
   object-fit: cover;
   object-position: center;
   inline-size: 100%;
+  block-size: 100%;
 }
 
 .card-content {
@@ -146,12 +173,12 @@
   flex-wrap: wrap;
   justify-content: center;
   border: 2px solid var(--accent-color);
+  font-family: var(--acent-font);
   background-color: transparent;
   cursor: pointer;
   white-space: nowrap;
   appearance: none;
   min-inline-size: 130px;
-  font-family: var(--acent-font);
 }
 
 .button-like {
@@ -159,16 +186,16 @@
 }
 
 .footer {
-  border: none;
   display: flex;
   justify-content: center;
+  border: none;
 }
 
 .button-save {
-  background-color: var(--bg-color);
-  gap: 8px;
   align-items: center;
+  gap: 8px;
   padding: 15px 20px;
+  background-color: var(--bg-color);
 }
 
 .button__icon {
