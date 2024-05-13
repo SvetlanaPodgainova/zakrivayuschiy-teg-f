@@ -13,20 +13,6 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 
 */
-:root {
-  --main-font: "Inter-Variable", sans-serif;
-  --accent-font: "PressStart2P-Regular", monospace;
-  --font-weight-card-text: 400;
-  --font-weight-card-title: 700;
-  --bg-color: rgba(255, 255, 255, 1);
-  --bg-image: repeating-linear-gradient(#d3d3d3 0px 2px, transparent 2px 4px),
-    repeating-linear-gradient(90deg, #d3d3d3 0px 2px, transparent 2px 4px),
-    linear-gradient(#e7e7e7, #1a1a1a);
-  --accent-color: rgba(0, 0, 0, 1);
-  --color-button-text: rgba(255, 255, 255, 1);
-  --color-fill-heart: #ff0000;
-}
-
 .page {
   color: var(--accent-color);
   font-family: var(--main-font);
