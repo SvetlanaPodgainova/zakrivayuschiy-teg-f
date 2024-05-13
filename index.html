@@ -102,6 +102,20 @@
       </button>
 
       <dialog class="modal-window" id="popup">
+        <div class="modal-content">
+          <svg viewBox="0 0 21 21" class="button__icon">
+            <use href="./svg/floppy.svg#floppy">
+          </svg>
+          <h2 class="modal__title">Вставьте дискету, чтобы продолжить</h2>
+
+
+        </div>
+        <button
+          type="button"
+          class="content-button modal-window__button"
+          onclick="window['popup'].close()">
+          <span class="button__text">ok</span>
+        </button>
 
       </dialog>
     </footer>
