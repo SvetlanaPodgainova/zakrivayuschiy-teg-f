@@ -89,13 +89,23 @@
       </ul>      
     </main>
     <footer class="footer">
-      <button class="content-button button-save" type="button">
+      <button
+        class="content-button button-save"
+        type="button"
+        onclick="window['popup'].showModal()" 
+        aria-controls="popup"
+        >
         <svg viewBox="0 0 21 21" class="button__icon">
           <use href="./svg/floppy.svg#floppy">
         </svg>
         <span class="button__text">Сохранить на память</span></button>
       </button>
+
+      <dialog class="modal-window" id="popup">
+
+      </dialog>
     </footer>
+
     <script src="./scripts/like.js"></script>
   </body>
 </html>

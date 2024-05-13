@@ -293,3 +293,18 @@
   mix-blend-mode: difference;
   color: var(--color-button-text);
 }
+
+.modal-window {
+  block-size: 191px;
+  inline-size: 353px;
+}
+
+.modal-window[opened] {
+
+}
+
+.modal-window::backdrop {
+  opacity: 0.75;
+  background-color: #000000; 
+}
+
