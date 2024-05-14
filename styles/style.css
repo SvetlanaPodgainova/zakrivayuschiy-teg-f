@@ -213,7 +213,6 @@
 .content-button {
   position: relative;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   border: 2px solid var(--accent-color);
@@ -226,11 +225,12 @@
   white-space: nowrap;
   appearance: none;
   min-inline-size: 130px;
-}
-
-.card-content .content-button {
   block-size: 38px;
 }
+
+/* .card-content .content-button {
+  block-size: 38px;
+} */
 
 .content-button:hover {
   transition: 0.3s ease;
@@ -279,8 +279,8 @@
   gap: 8px;
   padding: 15px 20px;
   background-color: var(--bg-color);
-  min-inline-size: 335px;
   block-size: 55px;
+  inline-size: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
 }
 
 .button__icon {
@@ -288,13 +288,14 @@
   block-size: 22px;
   inline-size: 22px;
   mix-blend-mode: difference;
+  flex-shrink: 0;
 }
 
 .modal-window {
   border: 2px solid var(--accent-color);
   padding: 30px;
   background-color: var(--bg-color);
-  max-inline-size: 357px;
+  inline-size: clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);
 }
 
 .modal-window[opened] {
@@ -324,7 +325,6 @@
 }
 
 .modal-content .button__icon {
-  flex-shrink: 0;
   inline-size: 39px;
   block-size: 39px;
 }
@@ -336,12 +336,23 @@
 }
 
 @media (width <= 375px) {
-  .header__logo {
+  .image-wrapper {
+    block-size: 375px;
   }
 
   .button-save {
     flex-direction: column;
-    block-size: 84px;
-    inline-size: 306px;
+    min-block-size: 84px;
+    max-inline-size: 306px;
+  }
+
+  .button__icon {
+    block-size: 28px;
+    inline-size: 28px;
+  }
+
+  .modal-window {
+    max-inline-size: 341px;
+    padding-inline: 40px;
   }
 }
