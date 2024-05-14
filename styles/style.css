@@ -28,8 +28,6 @@
 
 .wrapper {
   margin: auto;
-  border: 2px solid var(--accent-color);
-  background-color: var(--bg-color);
   inline-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
 }
 
@@ -42,6 +40,7 @@
   padding: 25px 14px;
   font-family: var(--accent-font), sans-serif;
   background-color: var(--bg-color);
+  border: 2px solid var(--accent-color);
 }
 
 .header__logo {
@@ -122,6 +121,12 @@
   display: flex;
   flex-wrap: wrap;
   row-gap: 50px;
+  background-color: transparent;
+}
+
+.card-list__item {
+  border: 2px solid var(--accent-color);
+  background-color: var(--bg-color);
 }
 
 .card__title {
@@ -144,12 +149,16 @@
   font-family: var(--accent-font-family);
   font-family: var(--accent-font);
   font-size: 14px;
-  text-transform: uppercase;
   text-shadow: 0 0 1px var(--bg-color);
   inset-inline-end: 25px;
   inset-block-start: 25px;
   mix-blend-mode: hard-light;
 }
+
+.card__label-uppercase {
+  text-transform: uppercase;
+}
+
 
 @supports (
   (text-stroke: 1px var(--bg-color)) or
