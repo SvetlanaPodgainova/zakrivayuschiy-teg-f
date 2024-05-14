@@ -14,11 +14,11 @@
 */
 @keyframes activ-theme {
   0% {
-    inset-inline-start: -20px;
+    inset-inline-start: -13px;
   }
 
   100% {
-    inset-inline-start: -24px;
+    inset-inline-start: -17px;
   }
 }
 
