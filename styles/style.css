@@ -144,6 +144,7 @@
 
 .card__label {
   position: absolute;
+  z-index: 1;
   opacity: 0.5;
   color: var(--accent-color);
   font-family: var(--accent-font);
@@ -151,8 +152,7 @@
   text-shadow: 0 0 1px var(--bg-color);
   inset-inline-end: 25px;
   inset-block-start: 25px;
-  mix-blend-mode: hard-light;
-  z-index: 1;
+  mix-blend-mode: hard-light;  
 }
 
 .card__label-uppercase {
@@ -177,7 +177,7 @@
 
 .filter-sepia {
   filter: sepia(70%);
-} 
+}
 
 .filter-saturate {
   filter: saturate(150%);
@@ -189,18 +189,18 @@
 
 .filter-rotate {
   filter: hue-rotate(-90deg);
-} 
+}
 
 .filter-invert {
   filter: invert(0.2);
-} 
+}
 
 .filter-grayscale {
   filter: grayscale(0.5);
 }
 
 .filter-mix {
-  filter: brightness(110%) contrast(110%)  hue-rotate(350deg);;
+  filter: brightness(110%) contrast(110%) hue-rotate(350deg);
 }
 
 .filter-brightness {
@@ -307,11 +307,11 @@
 
 .button-save {
   gap: 8px;
+  margin: 50px auto 100px;
   padding: 15px 20px;
   background-color: var(--bg-color);
   block-size: 55px;
   inline-size: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
-  margin: 50px auto 100px;
 }
 
 .button__icon {
