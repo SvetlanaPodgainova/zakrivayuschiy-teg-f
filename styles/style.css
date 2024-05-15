@@ -37,10 +37,10 @@
   justify-content: end;
   align-items: center;
   margin-block-start: 100px;
+  border: 2px solid var(--accent-color);
   padding: 25px 14px;
   font-family: var(--accent-font), sans-serif;
   background-color: var(--bg-color);
-  border: 2px solid var(--accent-color);
 }
 
 .header__logo {
@@ -146,13 +146,13 @@
   position: absolute;
   opacity: 0.5;
   color: var(--accent-color);
-  font-family: var(--accent-font-family);
-  color: var(--accent-color);
+  font-family: var(--accent-font);
   font-size: 14px;
   text-shadow: 0 0 1px var(--bg-color);
   inset-inline-end: 25px;
   inset-block-start: 25px;
   mix-blend-mode: hard-light;
+  z-index: 1;
 }
 
 .card__label-uppercase {
@@ -320,11 +320,11 @@
 }
 
 .button__icon {
+  flex-shrink: 0;
   color: var(--color-button-text);
   block-size: 22px;
   inline-size: 22px;
   mix-blend-mode: difference;
-  flex-shrink: 0;
 }
 
 .modal-window {
@@ -388,7 +388,7 @@
   }
 
   .modal-window {
-    max-inline-size: 341px;
     padding-inline: 40px;
+    max-inline-size: 341px;
   }
 }

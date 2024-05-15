@@ -373,12 +373,14 @@
           </svg>
           <h2 class="modal__title">Вставьте дискету, чтобы продолжить</h2>
         </div>
-        <button
-          type="button"
-          class="content-button modal-window__button"
-          onclick="window['popup'].close()">
-          <span class="button__text">ok</span>
-        </button>
+        <form method="dialog">
+          <button
+            type="button"
+            class="content-button modal-window__button"
+            onclick="window['popup'].close()">
+            <span class="button__text">ok</span>
+          </button>
+        </form>  
       </dialog>
     </footer>
     <script src="./scripts/like.js"></script>
