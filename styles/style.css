@@ -147,7 +147,7 @@
   opacity: 0.5;
   color: var(--accent-color);
   font-family: var(--accent-font-family);
-  font-family: var(--accent-font);
+  color: var(--accent-color);
   font-size: 14px;
   text-shadow: 0 0 1px var(--bg-color);
   inset-inline-end: 25px;

@@ -11,7 +11,7 @@
     repeating-linear-gradient(90deg, #d3d3d3 0px 2px, transparent 2px 4px),
     linear-gradient(#e7e7e7, #1a1a1a);
   --accent-color: rgba(0, 0, 0, 1);
-  --color-button-text: rgba(255, 255, 255, 1);  
+  --color-button-text: rgba(255, 255, 255, 1);   
 }
 
 :root.theme-dark {
