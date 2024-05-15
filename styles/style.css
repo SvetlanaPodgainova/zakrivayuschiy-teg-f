@@ -159,7 +159,6 @@
   text-transform: uppercase;
 }
 
-
 @supports (
   (text-stroke: 1px var(--bg-color)) or
     (-webkit-text-stroke: 1px var(--bg-color))
@@ -174,6 +173,38 @@
   object-position: center;
   inline-size: 100%;
   block-size: 100%;
+}
+
+.filter-sepia {
+  filter: sepia(70%);
+} 
+
+.filter-saturate {
+  filter: saturate(150%);
+}
+
+.filter-contrast {
+  filter: contrast(120%);
+}
+
+.filter-rotate {
+  filter: hue-rotate(-90deg);
+} 
+
+.filter-invert {
+  filter: invert(0.2);
+} 
+
+.filter-grayscale {
+  filter: grayscale(0.5);
+}
+
+.filter-mix {
+  filter: brightness(110%) contrast(110%)  hue-rotate(350deg);;
+}
+
+.filter-brightness {
+  filter: brightness(150%);
 }
 
 .card-content {
@@ -236,10 +267,6 @@
   min-inline-size: 130px;
   block-size: 38px;
 }
-
-/* .card-content .content-button {
-  block-size: 38px;
-} */
 
 .content-button:hover {
   transition: 0.3s ease;
