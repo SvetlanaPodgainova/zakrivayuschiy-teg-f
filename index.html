@@ -366,23 +366,23 @@
         </svg>
         <span class="button__text">Сохранить на память</span>
       </button>
-      <dialog class="modal-window" id="popup">
-        <div class="modal-content">
-          <svg viewBox="0 0 21 21" class="button__icon">
-            <use href="./svg/floppy.svg#floppy"></use>
-          </svg>
-          <h2 class="modal__title">Вставьте дискету, чтобы продолжить</h2>
-        </div>
-        <form method="dialog">
-          <button
-            type="button"
-            class="content-button modal-window__button"
-            onclick="window['popup'].close()">
-            <span class="button__text">ok</span>
-          </button>
-        </form>  
-      </dialog>
     </footer>
+    <dialog class="modal-window" id="popup">
+      <div class="modal-content">
+        <svg viewBox="0 0 21 21" class="button__icon">
+          <use href="./svg/floppy.svg#floppy"></use>
+        </svg>
+        <h2 class="modal__title">Вставьте дискету, чтобы продолжить</h2>
+      </div>
+      <form method="dialog">
+        <button
+          type="button"
+          class="content-button modal-window__button"
+          onclick="window['popup'].close()">
+          <span class="button__text">ok</span>
+        </button>
+      </form>  
+    </dialog>
     <script src="./scripts/like.js"></script>
   </body>
 </html>

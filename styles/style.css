@@ -126,7 +126,7 @@
 
 .card-list__item {
   border: 2px solid var(--accent-color);
-  background-color: var(--bg-color);
+  background-color: var(--bg-color);  
 }
 
 .card__title {
@@ -221,6 +221,7 @@
 .card__text-item {
   font-weight: var(--font-weight-card-text);
   font-size: 18px;
+  line-height: 1.17;
 }
 
 .card__button {
